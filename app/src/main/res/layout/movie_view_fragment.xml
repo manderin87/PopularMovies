@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d3d3d3"
+        android:fitsSystemWindows="true"
+        tools:context=".MovieViewFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@android:color/transparent"
+            android:clipToPadding="false"
+            android:overScrollMode="always"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="?attr/actionBarSize"
+            android:scrollbars="vertical"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_try_again"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icn_movie"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Unable to display results!"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"/>
+
+            <Button
+                android:id="@+id/button_try_again"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Try Again"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_no_favorites"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icn_movie"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="You have no favorites to display!"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <com.lonewolfgames.framework.UI.ProgressView
+            android:id="@+id/progress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/movie_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+      <item android:id="@+id/action_share"
+            android:title="Share"
+            android:orderInCategory="100"
+            android:icon="@drawable/icn_share"
+            app:showAsAction="ifRoom"/>
+      <item android:id="@+id/action_favorite"
+            android:title="Favorite"
+            android:orderInCategory="100"
+            android:icon="@drawable/icn_not_favorite"
+            app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_reviews"
+          android:title="Reviews"
+          android:orderInCategory="100"
+          android:icon="@drawable/icn_reviews"
+          app:showAsAction="ifRoom"/>
+</menu>
