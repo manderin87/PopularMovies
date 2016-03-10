@@ -27,4 +27,4 @@ At this point, you should be able to build and run the project in the Android de
 
 # API
 
-This app requires an API keys in order to run. The keys should be replaced in the MovieService file.
+This app requires API keys in order to run. The keys should be replaced in the MovieService file.
